@@ -1,13 +1,13 @@
 import { useState, useEffect, Children } from 'react'
-import { PersonProps } from '@features/person/components/Person/interface'
-import { withPerson } from './withPerson'
+import { StarshipProps } from '@features/starship/components/Starship/interface'
+import { withStarship } from './withStarship'
 
 interface Iship {
   name: string
   model: string
 }
 
-const Person = ({ name, gender, height, starships }: PersonProps) => {
+const Starship = ({ name, starships }: StarshipProps) => {
   const [ships, setShips] = useState<Iship[]>([])
   const [favShip, setFavShip] = useState()
 
@@ -33,24 +33,19 @@ const Person = ({ name, gender, height, starships }: PersonProps) => {
   return (
     <div className='p-3 mt-10 bg-gray-300 rounded-sm bg-opacity-25'>
       <p className='mb-3 text-xl'>{name}</p>
-      <p className='text-sm'>Climate: {gender}</p>
-      <p className='text-sm'>Terrain: {height}</p>
 
-      {ships.length > 0 && !favShip && (
-        <div>
-          <h1 className='text-sm mt-3'>Select Primary Ship</h1>
-          <select onChange={handleChange}>
-            {Children.toArray(
-              ships.map(ship => {
-                return <option>{ship.name}</option>
-              })
-            )}
-          </select>
-        </div>
+      {ships.length > 0 && (
+        <select onChange={handleChange}>
+          {Children.toArray(
+            ships.map(ship => {
+              return <option>{ship.name}</option>
+            })
+          )}
+        </select>
       )}
-      {ships.length > 0 && favShip && (
+      {ships.length > 0 && (
         <div>
-          <h1 className='text-sm mt-3'>Primary Ship</h1>
+          <h1 className='text-sm mt-3'>Favorite Ship</h1>
           <p mb-3 text-xl>
             {favShip}
           </p>
@@ -60,4 +55,4 @@ const Person = ({ name, gender, height, starships }: PersonProps) => {
   )
 }
 
-export default withPerson(Person)
+export default withStarship(Starship)

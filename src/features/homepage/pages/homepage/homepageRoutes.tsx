@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom'
 import { AppLayout } from '@components/AppLayout'
-import PersonListPage from '@features/person/pages/PersonListPage/PersonListPage'
+import { HomePage } from './pages/HomePage'
 import PlanetListPage from '@features/planet/pages/PlanetListPage/PlanetListPage'
-import { HomePage } from './pages/homepage/pages/HomePage'
+import PersonListPage from '@features/person/pages/PersonListPage/PersonListPage'
 
-export const homepageRoutes = {
+export const sampleRoute = {
   path: '',
   element: (
     <AppLayout>
@@ -13,7 +13,7 @@ export const homepageRoutes = {
   ),
   children: [
     { path: '/', element: <HomePage /> },
-    { path: '/people', element: <PersonListPage /> },
     { path: '/planets', element: <PlanetListPage /> },
+    { path: '/people', element: <PersonListPage /> },
   ],
 }

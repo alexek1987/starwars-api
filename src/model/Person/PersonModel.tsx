@@ -10,6 +10,12 @@ export class PersonModel {
   @Expose({ name: 'height' })
   height: string
 
+  @Expose({ name: 'isFav' })
+  isFav: string
+
+  @Expose({ name: 'starships' })
+  starships: string
+
   // @Type(() => Starship)
   // starships: Starship[]
 }
