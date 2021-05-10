@@ -1,0 +1,7 @@
+.container {
+  @apply h-screen p-4;
+
+  > .body {
+    @apply w-full max-w-screen-md m-auto;
+  }
+}

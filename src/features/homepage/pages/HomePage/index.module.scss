@@ -1,0 +1,20 @@
+.container {
+  @apply flex justify-center align-middle flex-col items-center h-screen;
+
+  > .logo {
+    @apply flex justify-center items-center mb-5;
+  }
+  > .contract {
+    @apply flex justify-start items-center;
+    > svg {
+      @apply mr-0.5;
+    }
+    > span {
+      @apply ml-2 font-bold;
+    }
+  }
+
+  > .title {
+    @apply text-2xl mb-3.5;
+  }
+}

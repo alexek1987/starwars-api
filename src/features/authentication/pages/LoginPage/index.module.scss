@@ -1,0 +1,9 @@
+.container {
+  @apply w-1/2 m-auto h-screen flex items-center;
+  > form {
+    @apply flex-1;
+    > .password {
+      @apply mt-5;
+    }
+  }
+}
