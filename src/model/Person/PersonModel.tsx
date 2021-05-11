@@ -1,21 +1,15 @@
-import { Expose } from 'class-transformer'
+import { Expose, Transform } from 'class-transformer'
 
 export class PersonModel {
   @Expose({ name: 'name' })
   name: string
 
-  @Expose({ name: 'gender' })
-  gender: string
+  @Expose({ name: 'favVehicle' })
+  favVehicle: string
 
-  @Expose({ name: 'height' })
-  height: string
+  @Expose({ name: 'favStarship' })
+  favStarship: string
 
-  @Expose({ name: 'isFav' })
-  isFav: string
-
-  @Expose({ name: 'starships' })
-  starships: string
-
-  // @Type(() => Starship)
-  // starships: Starship[]
+  @Expose({ name: 'url' })
+  url: string
 }

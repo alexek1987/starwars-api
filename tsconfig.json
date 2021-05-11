@@ -5,7 +5,11 @@
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,
     "target": "ES6",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,5 +25,8 @@
     "jsx": "react-jsx",
     "strictPropertyInitialization": false
   },
-  "include": ["src", "declarations.d.ts"]
+  "include": [
+    "src",
+    "declarations.d.ts"
+  ]
 }

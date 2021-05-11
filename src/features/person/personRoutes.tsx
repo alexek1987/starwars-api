@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { AppLayout } from '@components/AppLayout'
 import PersonListPage from '@features/person/pages/PersonListPage/PersonListPage'
+import PersonInfoPage from './pages/PersonInfoPage/pages/PersonInfoPage'
 
 export const personRoutes = {
   path: 'people',
@@ -9,5 +10,8 @@ export const personRoutes = {
       <Outlet />
     </AppLayout>
   ),
-  children: [{ path: '/', element: <PersonListPage /> }],
+  children: [
+    { path: '/', element: <PersonListPage /> },
+    { path: '/:id', element: <PersonInfoPage /> },
+  ],
 }

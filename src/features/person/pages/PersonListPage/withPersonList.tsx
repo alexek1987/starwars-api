@@ -1,4 +1,3 @@
-import React from 'react'
 import { PersonListPageProps } from '@features/person/pages/PersonListPage/interface'
 import { useAppClient } from '@client/useAppClient'
 import { useQuery } from 'react-query'

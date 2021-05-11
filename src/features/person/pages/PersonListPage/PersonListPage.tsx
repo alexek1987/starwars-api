@@ -10,7 +10,6 @@ const PersonListPage = ({ data, isLoading }: PersonListPageProps) => {
     <div className='container mx-auto h-16'>
       <img className='mx-auto' width='150' src={swLogo} alt='' />
       <div>
-        {console.log(data)}
         {Children.toArray(data?.results.map(person => <Person {...person} />))}
       </div>
     </div>

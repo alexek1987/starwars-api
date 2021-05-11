@@ -18,7 +18,6 @@ const Starship = ({ name, starships }: StarshipProps) => {
 
   const handleChange = e => {
     setFavShip(e.currentTarget.value)
-    console.log(favShip)
   }
 
   useEffect(() => {

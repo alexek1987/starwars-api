@@ -1,5 +1,4 @@
 import { useRoutes, Navigate } from 'react-router-dom'
-
 import { planetRoutes } from '@features/planet/planetRoutes'
 import { personRoutes } from '@features/person/personRoutes'
 import { homepageRoutes } from '@features/homepage/homepageRoutes'
