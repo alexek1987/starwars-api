@@ -10,7 +10,8 @@
       "@config/*": ["src/config/*"],
       "@hooks/*": ["src/hooks/*"],
       "@interfaces/*": ["src/interfaces/*"],
-      "@model/*": ["src/model/*"]
+      "@model/*": ["src/model/*"],
+      "@constant/*": ["src/constant/*"]
     }
   }
 }

@@ -9,5 +9,5 @@ export const starshipRoutes = {
       <Outlet />
     </AppLayout>
   ),
-  children: [{ path: '/', element: <StarshipListPage /> }],
+  // children: [{ path: '/', element: <StarshipListPage /> }],
 }
