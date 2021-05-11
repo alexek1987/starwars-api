@@ -1,9 +1,12 @@
 import { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios'
+
+import { VehicleClientActions } from '@client/collections/VehicleClient'
+
 import { PlanetClientActions } from './collections/PlanetClient'
 import { PersonClientActions } from './collections/PersonClient'
+import { StarshipClientActions } from './collections/StarshipClient'
 import { AuthClient } from './collections/AuthClient'
 import { AuthFunctionListenerType } from './interface'
-import { StarshipClientActions } from './collections/StarshipClient'
 
 function injectAuthorizationToken(
   headers: Record<string, unknown>,
@@ -27,9 +30,11 @@ export class Client {
 
   public planet = new PlanetClientActions(this.client)
 
-  public person = new PersonClientActions(this.client)
+  public person = new PersonClientActions(this.client, this)
 
   public starship = new StarshipClientActions(this.client)
+
+  public vehicle = new VehicleClientActions(this.client)
 
   onAuthStateChange(listener: () => void) {
     this.authStateListener.push(listener)

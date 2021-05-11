@@ -1,18 +1,13 @@
 import { AxiosInstance } from 'axios'
 import { plainToClass } from 'class-transformer'
-import { StarshipsModel } from '@model/Starship/StarshipsModel'
+import { StarshipModel } from '@model/Starship/StarshipModel'
 
 export class StarshipClientActions {
   constructor(private client: AxiosInstance) {}
 
-  async getStarshipList() {
-    const response = await this.client.get(`/people`)
+  async getStarship(id: string) {
+    const response = await this.client.get(`/starships/${id}`)
 
-    // for (let i = 0; i < response.data.results.length; i += 1) {
-    //   console.log(response.data.results[i])
-    // }
-    // console.log(response.data.results[0].starships)
-
-    return plainToClass(StarshipsModel, response.data)
+    return plainToClass(StarshipModel, response.data)
   }
 }

@@ -1,14 +1,10 @@
-import { PersonInfoModel } from '@model/Person/PersonInfoModel'
+import { PeopleModel } from '@model/Person/PeopleModel'
 
 export type PersonInfoProps = {
-  name: string
-  gender: string
-  hair_color: string
-  starships: string
-  vehicles: string
-  handleStarshipChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  handleVehicleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  sliceUrl: () => string
+  data: PeopleModel | undefined
+  isLoading: boolean
+  handleOnSubmit: (formValue: any) => void
+  initialValues: any
 }
 
 export type Iship = {

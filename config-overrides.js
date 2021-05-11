@@ -17,5 +17,6 @@ module.exports = override(
     '@hooks': path.resolve(__dirname, 'src/hooks'),
     '@interfaces': path.resolve(__dirname, 'src/interfaces'),
     '@model': path.resolve(__dirname, 'src/model'),
+    '@constant': path.resolve(__dirname, 'src/constant'),
   })
 )
