@@ -1,9 +1,8 @@
 import { Type } from 'class-transformer'
 import { StarshipModel } from '@model/Starship/StarshipModel'
 import { VehicleModel } from '@model/Vehicle/VehicleModel'
-import { PersonModel } from './PersonModel'
 
-export class PeopleModel {
+export class PersonModel {
   birth_year: string
 
   created: string
@@ -26,9 +25,6 @@ export class PeopleModel {
 
   @Type(() => StarshipModel)
   starships: StarshipModel[]
-
-  @Type(() => PersonModel)
-  results: PersonModel[]
 
   url: string
 

@@ -5,4 +5,7 @@ export class PlanetsModel {
   @Expose({ name: 'results' })
   @Type(() => PlanetModel)
   results: PlanetModel[]
+
+  @Expose({ name: 'setPage' })
+  setPage: number
 }

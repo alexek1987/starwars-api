@@ -18,8 +18,4 @@ export class PersonInfoModel {
 
   @Expose({ name: 'vehicles' })
   vehicles: string
-
-  sliceUrl() {
-    this.url.slice(-3)
-  }
 }

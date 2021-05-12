@@ -8,8 +8,8 @@ import { VehicleModel } from '@model/Vehicle/VehicleModel'
 export class PersonClientActions {
   constructor(private client: AxiosInstance, private clientClass: Client) {}
 
-  async getPersonList() {
-    const response = await this.client.get(`/people`)
+  async getPersonList(page: number) {
+    const response = await this.client.get(`/people/?page=${page}`)
     return plainToClass(PeopleModel, response.data)
   }
 

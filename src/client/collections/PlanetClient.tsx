@@ -5,8 +5,8 @@ import { PlanetsModel } from '@model/Planet/PlanetsModel'
 export class PlanetClientActions {
   constructor(private client: AxiosInstance) {}
 
-  async getPlanetList() {
-    const response = await this.client.get(`/planets`)
+  async getPlanetList(page: number) {
+    const response = await this.client.get(`/planets/?page=${page}`)
     return plainToClass(PlanetsModel, response.data)
   }
 }
