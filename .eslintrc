@@ -39,6 +39,7 @@
     "jsx-a11y/control-has-associated-label": "off",
     "func-names": "off",
     "react/no-danger": "off",
+    "no-underscore-dangle": "off"
   },
   "overrides": [
     {

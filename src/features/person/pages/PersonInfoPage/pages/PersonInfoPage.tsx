@@ -41,26 +41,30 @@ const PersonInfoPage = ({
               <div className=''>
                 <InputField type='text' name='skin_color' label='Skin Color' />
               </div>
-              <div className='flex flex-col text-2xl font-bold mt-3'>
-                <span className='mb-3'>Primary Starship</span>
-                <Field as='select' name='primary_starship'>
-                  {Children.toArray(
-                    data?.starships.map(ship => {
-                      return <option>{ship.name}</option>
-                    })
-                  )}
-                </Field>
-              </div>
-              <div className='flex flex-col text-2xl font-bold mt-3'>
-                <span className='mb-3'>Primary Vehicle</span>
-                <Field as='select' name='primary_vehicle'>
-                  {Children.toArray(
-                    data?.vehicles.map(vehicle => {
-                      return <option>{vehicle.name}</option>
-                    })
-                  )}
-                </Field>
-              </div>
+              {data?.starships.length > 0 && (
+                <div className='flex flex-col text-2xl font-bold mt-3'>
+                  <span className='mb-3'>Primary Starship</span>
+                  <Field as='select' name='primary_starship'>
+                    {Children.toArray(
+                      data?.starships.map(ship => {
+                        return <option>{ship.name}</option>
+                      })
+                    )}
+                  </Field>
+                </div>
+              )}
+              {data?.vehicles?.length > 0 && (
+                <div className='flex flex-col text-2xl font-bold mt-3'>
+                  <span className='mb-3'>Primary Vehicle</span>
+                  <Field as='select' name='primary_vehicle'>
+                    {Children.toArray(
+                      data?.vehicles.map(vehicle => {
+                        return <option>{vehicle.name}</option>
+                      })
+                    )}
+                  </Field>
+                </div>
+              )}
               <PrimaryButton title='Submit' />
             </Form>
           </>

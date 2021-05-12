@@ -6,4 +6,6 @@ export const initialValues = {
   eye_color: '',
   birth_year: '',
   skin_color: '',
+  primary_starship: '',
+  primary_vehicle: '',
 }

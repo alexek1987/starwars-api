@@ -1,7 +1,7 @@
-import { PeopleModel } from '@model/Person/PeopleModel'
+import { PersonModel } from '@model/Person/PersonModel'
 
 export type PersonInfoProps = {
-  data: PeopleModel | undefined
+  data: PersonModel
   isLoading: boolean
   handleOnSubmit: (formValue: any) => void
   initialValues: any

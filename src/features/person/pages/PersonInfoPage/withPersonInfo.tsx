@@ -23,6 +23,8 @@ const withPersonInfo = (Component: React.FC<PersonInfoProps>) => {
       return <div>Loading...</div>
     }
 
+    console.log(data)
+
     const newProps = {
       data,
       isLoading,
