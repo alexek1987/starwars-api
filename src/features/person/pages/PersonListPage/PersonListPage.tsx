@@ -5,7 +5,7 @@ import swLogo from '@assets/images/swLogo.png'
 import PrimaryButton from '@components/buttons/PrimaryButton'
 import { withPersonList } from './withPersonList'
 
-const PersonListPage = ({ data, isLoading, setPage }: any) => {
+const PersonListPage = ({ data, isLoading, setPage }: PersonListPageProps) => {
   if (isLoading) return <div>Loading...</div>
   // console.log(data)
 

@@ -9,6 +9,7 @@ const withPersonInfo = (Component: React.FC<PersonInfoProps>) => {
   function Hoc() {
     const { id } = useParams()
     const appClient = useAppClient()
+    // const [primaryShip, setPrimaryShip] = useState()
 
     const { data, isLoading } = useQuery(['person', id], () =>
       appClient?.person.getPerson(id)
@@ -19,7 +20,7 @@ const withPersonInfo = (Component: React.FC<PersonInfoProps>) => {
     }
 
     if (!data) {
-      return <div>loading...</div>
+      return <div>Loading...</div>
     }
 
     const newProps = {
@@ -30,6 +31,12 @@ const withPersonInfo = (Component: React.FC<PersonInfoProps>) => {
         name: data.name,
         height: data.height,
         gender: data.gender,
+        hair_color: data.hair_color,
+        eye_color: data.eye_color,
+        birth_year: data.birth_year,
+        skin_color: data.skin_color,
+        primary_starship: data.primary_starship,
+        primary_vehicle: data.primary_vehicle,
       },
       handleOnSubmit,
     }

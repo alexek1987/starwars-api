@@ -34,4 +34,10 @@ export class PeopleModel {
 
   @Type(() => VehicleModel)
   vehicles: VehicleModel[]
+
+  @Type(() => StarshipModel)
+  primary_starship: StarshipModel
+
+  @Type(() => VehicleModel)
+  primary_vehicle: VehicleModel
 }
