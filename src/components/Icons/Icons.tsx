@@ -1,6 +1,7 @@
 import { FC, SVGProps } from 'react'
 import { IconProps } from '@components/Icons/interface'
 import { ReactComponent as EmailSVG } from './icons/EmailSVG.svg'
+import { ReactComponent as StarSVG } from './icons/StarSVG.svg'
 
 const Icon = (
   SvgComponent: FC<SVGProps<SVGSVGElement>>
@@ -12,3 +13,5 @@ const Icon = (
 }
 
 export const EmailIcon = Icon(EmailSVG)
+
+export const StarIcon = Icon(StarSVG)

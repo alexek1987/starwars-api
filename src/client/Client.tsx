@@ -1,10 +1,10 @@
 import { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios'
 
 import { VehicleClientActions } from '@client/collections/VehicleClient'
-
 import { PlanetClientActions } from './collections/PlanetClient'
 import { PersonClientActions } from './collections/PersonClient'
 import { StarshipClientActions } from './collections/StarshipClient'
+import { ResidentClientActions } from './collections/ResidentClient'
 import { AuthClient } from './collections/AuthClient'
 import { AuthFunctionListenerType } from './interface'
 
@@ -28,13 +28,15 @@ export class Client {
 
   public auth = new AuthClient(this.client, this.authStateListener)
 
-  public planet = new PlanetClientActions(this.client)
+  public planet = new PlanetClientActions(this.client, this)
 
   public person = new PersonClientActions(this.client, this)
 
   public starship = new StarshipClientActions(this.client)
 
   public vehicle = new VehicleClientActions(this.client)
+
+  public resident = new ResidentClientActions(this.client)
 
   onAuthStateChange(listener: () => void) {
     this.authStateListener.push(listener)

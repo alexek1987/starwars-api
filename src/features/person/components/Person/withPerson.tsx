@@ -3,12 +3,12 @@ import { PersonProps } from '@features/person/components/Person/interface'
 import { PersonModel } from '@model/Person/PersonModel'
 
 const withPerson = (Component: React.FC<PersonProps>) => {
-  function Hoc(props: PersonModel) {
+  function Hoc(person: any) {
     const newProps = {
-      ...props,
+      ...person,
     }
 
-    return <Component {...props} />
+    return <Component {...newProps} />
   }
 
   return Hoc

@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { AppLayout } from '@components/AppLayout'
 import PlanetListPage from '@features/planet/pages/PlanetListPage/PlanetListPage'
+import PlanetInfoPage from './pages/PlanetInfoPage/pages/PlanetInfoPage'
 
 export const planetRoutes = {
   path: 'planets',
@@ -9,5 +10,8 @@ export const planetRoutes = {
       <Outlet />
     </AppLayout>
   ),
-  children: [{ path: '/', element: <PlanetListPage /> }],
+  children: [
+    { path: '/', element: <PlanetListPage /> },
+    { path: '/:id', element: <PlanetInfoPage /> },
+  ],
 }

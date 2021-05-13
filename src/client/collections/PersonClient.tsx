@@ -1,10 +1,10 @@
 import { AxiosInstance } from 'axios'
-import { plainToClass } from 'class-transformer'
-import { PersonModel } from '@model/Person/PersonModel'
 import { Client } from '@client/Client'
+import { plainToClass } from 'class-transformer'
+import { PeopleModel } from '@model/Person/PeopleModel'
+import { PersonModel } from '@model/Person/PersonModel'
 import { StarshipModel } from '@model/Starship/StarshipModel'
 import { VehicleModel } from '@model/Vehicle/VehicleModel'
-import { PeopleModel } from '@model/Person/PeopleModel'
 
 export class PersonClientActions {
   constructor(private client: AxiosInstance, private clientClass: Client) {}

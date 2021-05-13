@@ -1,11 +1,8 @@
 import { Expose } from 'class-transformer'
 
-export class StarshipModel {
+export class FilmModel {
   @Expose({ name: 'name' })
   name: string
-
-  // @Expose({ name: 'starships' })
-  // starships: string
 
   @Expose({ name: 'url' })
   url: string

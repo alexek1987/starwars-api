@@ -2,6 +2,7 @@ import cx from 'classnames'
 import { useNavigate } from 'react-router-dom'
 import PrimaryButton from '@components/buttons/PrimaryButton'
 import logo from '@assets/images/logo.png'
+import { StarIcon } from '@components/Icons/Icons'
 import styles from './index.module.scss'
 
 export function HomePage() {
@@ -11,7 +12,11 @@ export function HomePage() {
       <div className={styles.logo}>
         <img src={logo} alt='logo' />
       </div>
-      <div className={styles.title}>Starwars Mini-project</div>
+
+      <div className={cx(styles.contract, 'animate-bounce')}>
+        <StarIcon className='text-yellow-300' />
+        <span>Starwars Mini-project</span>
+      </div>
       <div className='flex'>
         <PrimaryButton
           title=' Planets Page'

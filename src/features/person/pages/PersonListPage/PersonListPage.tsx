@@ -13,7 +13,7 @@ const PersonListPage = ({
 }: PersonListPageProps) => {
   if (isLoading) return <div>Loading...</div>
 
-  // console.log(data)
+  console.log(data)
 
   return (
     <div className='container mx-auto h-16'>

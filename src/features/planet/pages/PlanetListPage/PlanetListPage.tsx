@@ -8,11 +8,13 @@ import { withPlanetList } from './withPlanetList'
 const PlanetListPage = ({ data, isLoading, setPage }: PlanetListPageProps) => {
   if (isLoading) return <div>Loading...</div>
 
+  console.log(data)
+
   return (
     <div className='container mx-auto h-16'>
       <img className='mx-auto' width='150' src={swLogo} alt='' />
       <div>
-        {Children.toArray(data?.results.map(planet => <Planet {...planet} />))}
+        {Children.toArray(data?.planets.map(planet => <Planet {...planet} />))}
       </div>
       <PrimaryButton
         title='Previous Page'

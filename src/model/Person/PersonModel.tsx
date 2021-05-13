@@ -1,6 +1,7 @@
 import { Type, Transform } from 'class-transformer'
 import { StarshipModel } from '@model/Starship/StarshipModel'
 import { VehicleModel } from '@model/Vehicle/VehicleModel'
+import { FilmModel } from '@model/Film/FilmModel'
 
 export class PersonModel {
   birth_year: string
@@ -31,6 +32,9 @@ export class PersonModel {
   @Type(() => VehicleModel)
   vehicles: VehicleModel[]
 
+  // @Type(() => FilmModel)
+  // films: FilmModel[]
+
   private _primary_vehicle: string
 
   get primary_vehicle() {
@@ -44,8 +48,21 @@ export class PersonModel {
     this._primary_vehicle = value
   }
 
-  @Transform(({ obj }) => obj.starships[0], { toClassOnly: true })
-  primary_starship: StarshipModel
+  private _primary_starship: string
+
+  get primary_starship() {
+    if (!this._primary_starship) {
+      this._primary_starship = this.starships[0].name
+    }
+    return this._primary_starship
+  }
+
+  set primary_starship(value: string) {
+    this._primary_starship = value
+  }
+
+  // @Transform(({ obj }) => obj.starships[0], { toClassOnly: true })
+  // primary_starship: StarshipModel
 
   // @Transform(({ obj }) => obj.vehicles[0], { toClassOnly: true })
   // primary_vehicle: VehicleModel

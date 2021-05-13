@@ -1,15 +1,31 @@
-import { Expose } from 'class-transformer'
+import { ResidentModel } from '@model/Resident/ResidentModel'
+import { Type } from 'class-transformer'
 
 export class PlanetModel {
-  @Expose({ name: 'name' })
   name: string
 
-  @Expose({ name: 'terrain' })
-  terrain: string
+  rotation_period: string
 
-  @Expose({ name: 'climate' })
+  orbital_period: string
+
+  diameter: string
+
   climate: string
 
-  @Expose({ name: 'population' })
+  gravity: string
+
+  terrain: string
+
   population: string
+
+  surface_water: string
+
+  url: string
+
+  edited: string
+
+  created: string
+
+  @Type(() => ResidentModel)
+  residents: ResidentModel[]
 }

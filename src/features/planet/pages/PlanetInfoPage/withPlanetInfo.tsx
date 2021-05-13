@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useQuery } from 'react-query'
 import { useParams } from 'react-router-dom'
-import { PersonInfoProps } from '@features/person/pages/PersonInfoPage/interface'
+import { PlanetInfoProps } from '@features/planet/pages/PlanetInfoPage/interface'
 import { useAppClient } from '@client/useAppClient'
-import { initialValues } from '@constant/form/PersonInitial'
+import { initialValues } from '@constant/form/PlanetInitial'
 
-const withPersonInfo = (Component: React.FC<PersonInfoProps>) => {
+const withPlanetInfo = (Component: React.FC<PlanetInfoProps>) => {
   function Hoc() {
     const { id } = useParams()
     const appClient = useAppClient()
 
-    const { data, isLoading } = useQuery(['person', id], () =>
-      appClient?.person.getPerson(id)
+    const { data, isLoading } = useQuery(['planet', id], () =>
+      appClient?.planet.getPlanet(id)
     )
 
     const handleOnSubmit = (formValue: any) => {
@@ -30,15 +30,11 @@ const withPersonInfo = (Component: React.FC<PersonInfoProps>) => {
       initialValues: {
         ...initialValues,
         name: data.name,
-        height: data.height,
-        gender: data.gender,
-        hair_color: data.hair_color,
-        eye_color: data.eye_color,
-        birth_year: data.birth_year,
-        skin_color: data.skin_color,
-        primary_starship: data.primary_starship,
-        primary_vehicle: data.primary_vehicle,
+        terrain: data.terrain,
+        gravity: data.gravity,
+        climate: data.climate,
       },
+
       handleOnSubmit,
     }
 
@@ -48,4 +44,4 @@ const withPersonInfo = (Component: React.FC<PersonInfoProps>) => {
   return Hoc
 }
 
-export { withPersonInfo }
+export { withPlanetInfo }

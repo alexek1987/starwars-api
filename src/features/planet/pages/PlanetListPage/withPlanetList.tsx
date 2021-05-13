@@ -6,7 +6,7 @@ import { useQuery } from 'react-query'
 const withPlanetList = (Component: React.FC<PlanetListPageProps>) => {
   function Hoc() {
     const appClient = useAppClient()
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState<number>(1)
 
     const { data, isLoading } = useQuery(['get-planet-list', page], () =>
       appClient?.planet.getPlanetList(page)
@@ -14,6 +14,7 @@ const withPlanetList = (Component: React.FC<PlanetListPageProps>) => {
     const newProps = {
       data,
       setPage,
+      page,
       isLoading,
     }
 

@@ -9,6 +9,7 @@ const Person = ({ name, url }) => {
     <Link to={`/people/${urlId}`}>
       <div className='p-3 mt-10 bg-gray-300 rounded-sm bg-opacity-25'>
         <p className='mb-3 text-xl'>{name}</p>
+        {/* <p className='mb-3 text-xl'>{primary_vehicle}</p> */}
       </div>
     </Link>
   )
