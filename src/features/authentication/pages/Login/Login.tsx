@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { Form, Formik } from 'formik'
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '@contexts/AuthContext'
@@ -17,26 +17,36 @@ const Login = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className='flex flex-col'>
-        <input
-          className='border py-2 px-3 text-grey-darkest'
-          ref={emailRef}
-          type='input'
-          placeholder='Email'
-        />
-        <input
-          className='border py-2 px-3 text-grey-darkest'
-          ref={pwRef}
-          type='password'
-          placeholder='Password'
-        />
-        {/* <InputField type='input' name='input' label='YES' /> */}
-        <PrimaryButton
-          title='Login'
-          onClick={() => login(emailRef.current.value, pwRef.current.value)}
-        />
-      </div>
+    <div className='flex flex-col'>
+      <label
+        className='mb-2 uppercase font-bold text-lg text-grey-darkest'
+        htmlFor='email'
+      >
+        Email
+      </label>
+      <input
+        ref={emailRef}
+        className='border py-2 px-3 text-grey-darkest'
+        type='email'
+        name='email'
+        id='email'
+      />
+      <label
+        className='mb-2 uppercase font-bold text-lg text-grey-darkest'
+        htmlFor='password'
+      >
+        Password
+      </label>
+      <input
+        ref={pwRef}
+        className='border py-2 px-3 text-grey-darkest'
+        type='password'
+        name='password'
+      />
+      <PrimaryButton
+        title='Login'
+        onClick={() => login(emailRef.current.value, pwRef.current.value)}
+      />
     </div>
   )
 }
