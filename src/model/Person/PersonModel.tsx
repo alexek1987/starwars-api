@@ -26,6 +26,10 @@ export class PersonModel {
 
   url: string
 
+  // birthYearAndName() {
+  //   this.birth_year + this.name
+  // }
+
   @Type(() => StarshipModel)
   starships: StarshipModel[]
 

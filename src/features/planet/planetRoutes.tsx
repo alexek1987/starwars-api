@@ -1,3 +1,4 @@
+import ProtectedRoute from '@components/ProtectedRoutes/ProtectedRoutes'
 import { Outlet } from 'react-router-dom'
 import { AppLayout } from '@components/AppLayout'
 import PlanetListPage from '@features/planet/pages/PlanetListPage/PlanetListPage'
@@ -11,7 +12,7 @@ export const planetRoutes = {
     </AppLayout>
   ),
   children: [
-    { path: '/', element: <PlanetListPage /> },
-    { path: '/:id', element: <PlanetInfoPage /> },
+    { path: '/', element: <ProtectedRoute Component={PlanetListPage} /> },
+    { path: '/:id', element: <ProtectedRoute Component={PlanetInfoPage} /> },
   ],
 }

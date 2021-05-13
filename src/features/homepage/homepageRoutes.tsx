@@ -1,7 +1,7 @@
+import ProtectedRoute from '@components/ProtectedRoutes/ProtectedRoutes'
+import Login from '@features/authentication/pages/Login/Login'
 import { Outlet } from 'react-router-dom'
 import { AppLayout } from '@components/AppLayout'
-import PersonListPage from '@features/person/pages/PersonListPage/PersonListPage'
-import PlanetListPage from '@features/planet/pages/PlanetListPage/PlanetListPage'
 import { HomePage } from './pages/homepage/pages/HomePage'
 
 export const homepageRoutes = {
@@ -13,7 +13,6 @@ export const homepageRoutes = {
   ),
   children: [
     { path: '/', element: <HomePage /> },
-    { path: '/people', element: <PersonListPage /> },
-    { path: '/planets', element: <PlanetListPage /> },
+    { path: '/login', element: <Login /> },
   ],
 }

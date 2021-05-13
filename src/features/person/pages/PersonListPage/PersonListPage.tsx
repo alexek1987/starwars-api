@@ -1,5 +1,5 @@
 import { Children } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { PersonListPageProps } from '@features/person/pages/PersonListPage/interface'
 import Person from '@features/person/components/Person/Person'
 import swLogo from '@assets/images/swLogo.png'
@@ -14,7 +14,7 @@ const PersonListPage = ({
 }: PersonListPageProps) => {
   if (isLoading) return <div>Loading...</div>
 
-  console.log(data)
+  // console.log(data)
 
   return (
     <div className='container mx-auto h-16'>

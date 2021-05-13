@@ -1,5 +1,4 @@
 import { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios'
-
 import { VehicleClientActions } from '@client/collections/VehicleClient'
 import { PlanetClientActions } from './collections/PlanetClient'
 import { PersonClientActions } from './collections/PersonClient'

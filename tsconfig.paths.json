@@ -11,7 +11,8 @@
       "@hooks/*": ["src/hooks/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@model/*": ["src/model/*"],
-      "@constant/*": ["src/constant/*"]
+      "@constant/*": ["src/constant/*"],
+      "@contexts/*": ["src/contexts/*"]
     }
   }
 }
