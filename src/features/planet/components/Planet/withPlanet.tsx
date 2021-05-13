@@ -5,12 +5,8 @@ import { PlanetProps } from '@features/planet/components/Planet/interface'
 import { PlanetModel } from '@model/Planet/PlanetModel'
 
 const withPlanet = (Component: React.FC<PlanetProps>) => {
-  function Hoc(props: PlanetModel) {
-    const newProps = {
-      ...props,
-    }
-
-    return <Component {...props} />
+  function Hoc(planet: PlanetProps) {
+    return <Component {...planet} />
   }
 
   return Hoc

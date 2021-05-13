@@ -38,7 +38,7 @@ export class PersonModel {
   private _primary_vehicle: string
 
   get primary_vehicle() {
-    if (!this._primary_vehicle) {
+    if (!this._primary_vehicle && this.vehicles.length > 0) {
       this._primary_vehicle = this.vehicles[0].name
     }
     return this._primary_vehicle
@@ -51,7 +51,7 @@ export class PersonModel {
   private _primary_starship: string
 
   get primary_starship() {
-    if (!this._primary_starship) {
+    if (!this._primary_starship && this.starships.length > 0) {
       this._primary_starship = this.starships[0].name
     }
     return this._primary_starship

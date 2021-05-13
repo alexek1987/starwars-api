@@ -14,14 +14,16 @@ export function HomePage() {
       </div>
 
       <div className={cx(styles.contract, 'animate-bounce')}>
-        <StarIcon className='text-yellow-300' />
-        <span>Starwars Mini-project</span>
+        <StarIcon height='200px' width='100px' className='text-yellow-300' />
+        <span>StarWars Mini-project</span>
       </div>
+
       <div className='flex'>
         <PrimaryButton
           title=' Planets Page'
           onClick={() => navigate('/planets')}
         />
+
         <PrimaryButton
           title='People Page'
           onClick={() => navigate('/people')}

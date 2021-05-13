@@ -34,8 +34,8 @@ const PlanetInfoPage = ({
               </div>
               {data?.residents?.length > 0 && (
                 <div className='flex flex-col text-2xl font-bold mt-3'>
-                  <span className='mb-3'>Favorite Resident</span>
-                  <Field as='select' name='primary_vehicle'>
+                  <span className='mb-3'>Favorite Person</span>
+                  <Field as='select' name='favorite_person'>
                     {Children.toArray(
                       data?.residents.map(resident => {
                         return <option>{resident.name}</option>
@@ -44,12 +44,12 @@ const PlanetInfoPage = ({
                   </Field>
                 </div>
               )}
-
               <PrimaryButton title='Submit' />
             </Form>
           </>
         )}
       </Formik>
+
       <Link to='/planets'>
         <div className='mt-4'>Go back</div>
       </Link>

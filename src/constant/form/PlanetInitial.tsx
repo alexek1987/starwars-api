@@ -3,4 +3,5 @@ export const initialValues = {
   terrain: '',
   gravity: '',
   climate: '',
+  favorite_person: '',
 }
