@@ -19,5 +19,6 @@ module.exports = override(
     '@model': path.resolve(__dirname, 'src/model'),
     '@constant': path.resolve(__dirname, 'src/constant'),
     '@contexts': path.resolve(__dirname, 'src/contexts'),
+    '@functions': path.resolve(__dirname, 'src/functions'),
   })
 )

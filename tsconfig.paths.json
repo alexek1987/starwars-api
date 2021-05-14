@@ -12,7 +12,8 @@
       "@interfaces/*": ["src/interfaces/*"],
       "@model/*": ["src/model/*"],
       "@constant/*": ["src/constant/*"],
-      "@contexts/*": ["src/contexts/*"]
+      "@contexts/*": ["src/contexts/*"],
+      "@functions/*": ["src/functions/*"]
     }
   }
 }
